@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Hospital;
 
-class HospitalControlador extends Controller
+class HospitalController extends Controller   // 👈 aquí con "Controller"
 {
     public function example()
     {

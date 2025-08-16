@@ -1,12 +1,10 @@
-    <?php
+<?php
 
-    namespace App\Models;
+namespace App\Models;
 
-    use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
-    class Hospital extends Model
-    {
-        //
-
-        protected $fillable =["sede","ciudad"];
-    }
+class Hospital extends Model
+{
+    protected $fillable = ["sede", "ciudad"];
+}
