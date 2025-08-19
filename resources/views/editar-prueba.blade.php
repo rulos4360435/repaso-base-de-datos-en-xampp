@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="{{ url('/actualizar-prueba/' . $prueba->id) }}" method="POST">
+<form action="{{ url('/actualizar-prueba/' . $prueba->id) }}" autocomplete="off" method="POST">
     @csrf
     <input type="text" name="nombre" value="{{ $prueba->nombre }}" placeholder="Nombre">
     <input type="text" name="apellido" value="{{ $prueba->apellido }}" placeholder="Apellido">
