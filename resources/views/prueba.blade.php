@@ -25,18 +25,41 @@
          border-radius:5px;
          text-decoration: none;
     }
+   .header{
+    display: flex;
+    justify-content: center;
+    background:lightblue;
+    color: white;
+   }
+   .container{
+    display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     margin-top:10px;
+   }
+   table{
+    border-collapse:collapse;
+    width: 100%;
+   }
+   td,th{
+    border: 1px solid black;
+    padding: 10px;
+   }
  </style>
 <body>
-    <header>
+    <header class="header">
         <h1>Tabla: {{ $nombretabla }}</h1>
     </header>
-    <form action="{{ url('/crear') }}" autocomplete="off" method="post">
+    <main class="container">
+
+        <form  action="{{ url('/crear') }}" autocomplete="off" method="post">
         @csrf
         <input type="text" name="nombre" placeholder="nombre">
         <input type="text" name="apellido" placeholder="apellido">
         <input type="submit" value="enviar">
-    </form>
-    <table>
+    </form><br>
+    <table >
         <thead>
             <tr>
                 <th>ID</th>
@@ -58,6 +81,7 @@
             @endforeach
         </tbody>
     </table>
+    </main>
 </body>
 
 </html>
