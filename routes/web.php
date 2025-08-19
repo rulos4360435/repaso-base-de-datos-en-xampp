@@ -9,6 +9,9 @@ Route::get('/', function () {
 Route::get("/prueba/{prueba2}",function($prueba2){
        return "se mostrara el post {$prueba2}";
 });
+Route::get("/home/{prueba2}",function($prueba2){
+       return "se mostrara el post {$prueba2}";
+});
 
 
 Route::get('/hospitales', [HospitalController::class, 'example']);
