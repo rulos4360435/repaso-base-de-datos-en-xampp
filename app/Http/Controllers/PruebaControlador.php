@@ -12,7 +12,7 @@ class PruebaControlador extends Controller
     }
 
     public function store(Request $request){
-        $nuevo=Prueba::create([
+        Prueba::create([
             "nombre"  =>$request->nombre,
             "apellido"=>$request->apellido
         ]);
