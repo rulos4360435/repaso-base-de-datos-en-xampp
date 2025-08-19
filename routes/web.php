@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HospitalController;
-
+use App\Http\Controllers\PruebaControlador;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -13,15 +12,7 @@ Route::get("/home/{prueba2}",function($prueba2){
        return "se mostrara el post {$prueba2}";
 });
 
+Route::get("/prueba",[PruebaControlador::class,"index"]);
 
-Route::get('/hospitales', [HospitalController::class, 'example']);
-
-/**Route::get("crear-hospital",function(){
-    $hospital = new hospital();
-    $hospital->sede="norte";
-    $hospital->ciudad="cali";
-    $hospital->save();
-    return "datos registrados correctamente";
-});
- */
-
+Route::post("/crear",[PruebaControlador::class,"store"]);
+Route::get('/ver-pruebas', [PruebaControlador::class, 'mostrardatos']);
